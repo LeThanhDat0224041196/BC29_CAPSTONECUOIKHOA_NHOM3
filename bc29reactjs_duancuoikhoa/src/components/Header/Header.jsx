@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <header>
       <div className="header__wrapper">
-        <div className="header__bar max-width-container text-white">
+        <div className="header__bar row__main max-width-container text-white">
           <Logo/>
           <SearchHeader/>
           <HeaderList/>

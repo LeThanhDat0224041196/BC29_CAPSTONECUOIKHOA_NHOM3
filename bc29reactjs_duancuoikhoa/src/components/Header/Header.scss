@@ -1,6 +1,6 @@
 header {
   background-color: #343a40;
-  transition: background-color .5s ease;
+  transition: background-color 0.5s ease;
   width: 100%;
 }
 .header__wrapper {
@@ -14,9 +14,15 @@ header {
   align-content: center;
   flex-wrap: nowrap;
   justify-content: space-between;
-  @media only screen and (min-width: 1160px) {
-    padding-top: 0;
-    padding-bottom: 0;
+  &.row__main {
+    padding-bottom: 16px;
+    padding-top: 15px;
+  }
+  @media only screen and (min-width: 600px) {
+    &.row__main {
+      padding-bottom: 0;
+      padding-top: 0;
+    }
   }
   @media only screen and (min-width: 1160px) {
     padding: 32px;
