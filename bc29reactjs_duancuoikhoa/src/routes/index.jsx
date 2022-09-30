@@ -3,8 +3,14 @@ import { useRoutes } from 'react-router-dom'
 
 const AuthGuard = lazy(()=>import('../guards/AuthGuard/AuthGuard'));
 const AdminGuard = lazy(()=>import('../guards/AdminGuard/AdminGuard'));
-const NoAuthGuard = lazy(()=>import('../guards/NoAuthGuard/NoAuthGuard'))
-const HomeLayout = lazy(()=>import('../layouts/Home/Home'))
+const NoAuthGuard = lazy(()=>import('../guards/NoAuthGuard/NoAuthGuard'));
+
+const AdminLayout = lazy(()=>import('../layouts/Admin/Admin'))
+const SignIn = lazy(()=>import('../pages/signin/signIn'))
+const SignUp = lazy(()=>import('../pages/signup/signUp'))
+
+const HomeLayout = lazy(()=>import('../layouts/Home/Home'));
+const Home = lazy(()=>import('../pages/home/home'))
 
 export default function Router() {
   const routing = useRoutes([
@@ -29,11 +35,11 @@ export default function Router() {
           children: [
             {
               path: '/dang-nhap',
-              element: <signIn />
+              element: <SignIn />
             },
             {
               path: '/dang-ky',
-              element: <signUp />
+              element: <SignUp />
             }
           ]
         }
