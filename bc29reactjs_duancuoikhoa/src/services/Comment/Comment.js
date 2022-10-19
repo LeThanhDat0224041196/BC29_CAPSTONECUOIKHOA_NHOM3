@@ -1,13 +1,13 @@
 import { request } from "../../configs/axios";
 
-const getCommentAPI = ()=>{
+const fetchCommentAPI = ()=>{
     return request ({
         url: '/binh-luan',
         method: 'GET',
     })
 };
 
-const postCommentAPI = (data)=>{
+const fetchPostCommentAPI = (data)=>{
     return request ({
         data: data,
         url: '/binh-luan',
@@ -15,25 +15,19 @@ const postCommentAPI = (data)=>{
     })
 };
 
-const putCommentAPI = (id)=>{
+const fetchPutCommentAPI = (id)=>{
     return request ({
         url: `/binh-luan/${id}`,
         method: 'PUT'
     })
 };
 
-const deletedCommentAPI = (id)=>{
+const fetchDeletedCommentAPI = (id)=>{
     return request({
         url: `binh-luan/${id}`,
         method: 'DELETE',
     })
 };
 
-const getCommentByWorksAPI = ()=>{
-    return request({
-        url: `binh-luan/lay-binh-luan-theo-cong-viec/${MaCongViec}`,
-        method: 'GET',
-    })
-};
 
-export {getCommentAPI, postCommentAPI, putCommentAPI, deletedCommentAPI, getCommentByWorksAPI}
+export {fetchCommentAPI, fetchPostCommentAPI, fetchPutCommentAPI, fetchDeletedCommentAPI}

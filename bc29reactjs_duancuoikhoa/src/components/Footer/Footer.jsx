@@ -1,7 +1,8 @@
 import React from 'react'
 
 export default function Footer() {
-  return (
-    <div>Footer</div>
-  )
+  return
+  // return (
+  //   <div className="footer bg-light py-5 text-center">Footer</div>
+  // )
 }

@@ -1,7 +1,7 @@
-import { SET_USER_INFO } from "../types/userType";
+import { SET_USER_INFO } from "../types/userType"
 
-const setUserInfoAction = (data) =>{
-    return{
+const setUserInfoAction = (data)=>{
+    return {
         type: SET_USER_INFO,
         payload: data,
     };

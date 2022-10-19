@@ -17,17 +17,18 @@ const handleLogout = ()=>{
 
 return (
   <div className='navbar'>
-    {!userState.userInfo ?(
+    {!userState.userInfo? (
       <>
-      <button onClick={()=> navigate('/dang-nhap')} type="button" class="btn header__btn__sign shadow-none">Sign in</button>
-      <button onClick={()=> navigate('/dang-ky')} type="button" class="btn header__btn__join btn-outline-success shadow-none">Join</button>
+      <button onClick={()=> navigate('/dang-nhap')}  type="button" class="btn header__btn__sign shadow-none">Sign in</button>
+      <button onClick={()=> navigate('/dang-ky')}  type="button" class="btn header__btn__join btn-outline-success shadow-none">Join</button>
       </>
     ):(
       <>
-      <span>Hello {userState.userInfo.name}</span>
-      <button onClick={handleLogout} type="button" class="btn btn-info">Logout</button>
+        <span> Hello {userState.userInfo.user.name}</span>
+        <button onClick={handleLogout}  type="button" class="btn header__btn__join btn-outline-info shadow-none">LogOut</button>
       </>
-    )}
+    )
+    }
   </div>
 )
 }
