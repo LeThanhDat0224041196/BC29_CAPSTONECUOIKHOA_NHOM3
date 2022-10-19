@@ -1,6 +1,6 @@
 import {request} from '../../configs/axios'
 
-const signUpAPI = (data) =>{
+const fetchSignUpAPI = (data) =>{
     return request({
         data: data,
         url: '/auth/signup',
@@ -8,7 +8,7 @@ const signUpAPI = (data) =>{
     })
 };
 
-const signInAPI = (data)=>{
+const fetchSignInAPI = (data)=>{
     return request({
         data: data,
         url: '/auth/signin',
@@ -16,4 +16,4 @@ const signInAPI = (data)=>{
     })
 }
 
-export {signInAPI, signUpAPI}
+export {fetchSignInAPI, fetchSignUpAPI}

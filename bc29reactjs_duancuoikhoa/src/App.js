@@ -1,13 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
-import Header from './components/Header/Header';
 import './styles/styles.scss'
+import { BrowserRouter } from 'react-router-dom';
+import { Suspense } from 'react';
+import Router from './routes';
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
-    </div>
+    <BrowserRouter>
+      <Suspense fallback={<></>}>
+        <Router />
+      </Suspense>
+    </BrowserRouter>
   );
 }
 
